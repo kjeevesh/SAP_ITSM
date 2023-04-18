@@ -68,7 +68,7 @@ app.post('/Ticket/API/Create_Ticket', jsonParser, function(req, res) {
 function jira_postRequest(jira_ticket, jira_url, auth) {
   return axios.post(jira_url, jira_ticket, { auth: auth })
     .then(response => {
-      console.log('Response:', response.data);
+      console.log('Respons:', response.data);
       return response.status;
     })
     .catch(error => {
